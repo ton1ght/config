@@ -107,4 +107,6 @@ zinit wait lucid for \
  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
     zdharma/fast-syntax-highlighting \
  blockf \
-    zsh-users/zsh-completions \
+    zsh-users/zsh-completions
+
+alias dotfiles='/usr/bin/git --git-dir=/home/ton1ght/.cfg/ --work-tree=/home/ton1ght'
