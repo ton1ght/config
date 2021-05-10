@@ -25,9 +25,7 @@ font pango: Arimo Nerd Font 13
 #font pango:DejaVu Sans Mono 8
 
 exec_always --no-startup-id setxkbmap -option "caps:swapescape"
-exec_always --no-startup-id ~/scripts/fehbg.sh
 exec_always --no-startup-id ~/scripts/polybar_launch.sh
-#exec --no-startup-id picom
 exec --no-startup-id autorandr -c
 exec --no-startup-id dunst
 
@@ -120,6 +118,8 @@ bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
+
+bindsym $mod+m exec --no-startup-id WINIT_X11_SCALE_FACTOR=1.2 alacritty -e "ncmpcpp"
 
 # focus the child container
 #bindsym $mod+d focus child
