@@ -1,6 +1,8 @@
 " PLUGINS
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'vim-airline/vim-airline'
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/vista.vim'
