@@ -1692,9 +1692,14 @@ user_pref("browser.search.geoSpecificDefaults.url", "");
 /* END: internal custom pref to test for syntax errors ***/
 user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
 
-// CUSTOMIZATION
 
+// MY OWN ADDITIONS
 user_pref("browser.uiCustomization.state", "{\"placements\":{\"widget-overflow-fixed-list\":[],\"nav-bar\":[\"back-button\",\"forward-button\",\"urlbar-container\",\"umatrix_raymondhill_net-browser-action\",\"ublock0_raymondhill_net-browser-action\"],\"toolbar-menubar\":[\"menubar-items\"],\"TabsToolbar\":[\"tabbrowser-tabs\",\"new-tab-button\",\"downloads-button\",\"alltabs-button\"],\"PersonalToolbar\":[\"personal-bookmarks\"]},\"seen\":[\"umatrix_raymondhill_net-browser-action\",\"ublock0_raymondhill_net-browser-action\",\"developer-button\"],\"dirtyAreaCache\":[\"nav-bar\",\"TabsToolbar\"],\"currentVersion\":16,\"newElementCount\":3}"); user_pref("browser.uidensity", 1);
 user_pref("browser.uitour.enabled", false);
 user_pref("browser.uitour.url", "");
 user_pref("general.smoothScroll", false);
+user_pref("browser.urlbar.placeholderName", "DuckDuckGo");
+user_pref("browser.tabs.warnOnClose", false);
+user_pref("browser.tabs.warnOnOpen", false);
+user_pref("browser.tabs.warnOnCloseOtherTabs", false);
+user_pref("browser.warnOnQuit", false);
