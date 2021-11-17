@@ -1,0 +1,9 @@
+[submodule ".config/zsh/zsh-syntax-highlighting"]
+	path = .config/zsh/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule ".config/zsh/pure"]
+	path = .config/zsh/pure
+	url = https://github.com/sindresorhus/pure
+[submodule ".config/zsh/zsh-completions"]
+	path = .config/zsh/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions
