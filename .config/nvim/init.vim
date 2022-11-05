@@ -20,4 +20,5 @@ syntax on
 source ~/.config/nvim/mappings.vim
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/theme.vim
-source ~/.config/nvim/coc.vim
+
+lua require("lsp")
