@@ -18,3 +18,7 @@ keycode 19 = 0 parenright degree masculine
 keycode 10 = 1 exclam exclamdown onehalf
 keycode 54 = c C ccedilla Ccedilla
 keycode 24 = q Q copyright registered
+
+clear Lock
+keycode 9 = Caps_Lock NoSymbol Caps_Lock
+keycode 66 = Escape NoSymbol Escape

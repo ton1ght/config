@@ -1,6 +1,6 @@
 [global]
     font = Arimo Nerd Font 13
-    geometry = "640x5-30+50"
+    width = 800
     padding = 20
     word_wrap = yes
     max_icon_size = 200

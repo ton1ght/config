@@ -1,1 +1,1 @@
-feh --no-fehbg --bg-scale ~/pictures/dracula.png
+feh --no-fehbg --bg-scale /mnt/Private/pictures/wallpaper/dracula.png
