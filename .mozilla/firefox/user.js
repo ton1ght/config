@@ -1046,7 +1046,7 @@ user_pref("_user.js.parrot", "2400 syntax error: the parrot's kicked the bucket!
 /* 2404: disable clipboard commands (cut/copy) from "non-privileged" content [FF41+]
  * this disables document.execCommand("cut"/"copy") to protect your clipboard
  * [1] https://bugzilla.mozilla.org/1170911 ***/
-user_pref("dom.allow_cut_copy", false);
+user_pref("dom.allow_cut_copy", true);
 /* 2405: disable "Confirm you want to leave" dialog on page close
  * Does not prevent JS leaks of the page close event.
  * [1] https://developer.mozilla.org/docs/Web/Events/beforeunload
@@ -1326,7 +1326,7 @@ user_pref("privacy.sanitize.sanitizeOnShutdown", true);
  * prefs when set from there, and the sanitize code may change at any time
  * [SETTING] Privacy & Security>History>Custom Settings>Clear history when Firefox closes>Settings ***/
 user_pref("privacy.clearOnShutdown.cache", true);
-user_pref("privacy.clearOnShutdown.cookies", true);
+user_pref("privacy.clearOnShutdown.cookies", false);
 user_pref("privacy.clearOnShutdown.downloads", true); // see note above
 user_pref("privacy.clearOnShutdown.formdata", true); // Form & Search History
 user_pref("privacy.clearOnShutdown.history", true); // Browsing & Download History
@@ -1472,7 +1472,7 @@ user_pref("_user.js.parrot", "4500 syntax error: the parrot's popped 'is clogs")
  * [SETUP-WEB] RFP can cause the odd website to break in strange ways, and has a few side affects,
  * but is largely robust nowadays. Give it a try. Your choice. Also see 4504 (letterboxing).
  * [1] https://bugzilla.mozilla.org/418986 ***/
-user_pref("privacy.resistFingerprinting", true);
+user_pref("privacy.resistFingerprinting", false);
 /* 4502: set new window sizes to round to hundreds [FF55+] [SETUP-CHROME]
  * Width will round down to multiples of 200s and height to 100s, to fit your screen.
  * The override values are a starting point to round from if you want some control
@@ -1694,7 +1694,8 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 
 // MY OWN ADDITIONS
-user_pref("browser.uiCustomization.state", "{\"placements\":{\"widget-overflow-fixed-list\":[],\"nav-bar\":[\"back-button\",\"forward-button\",\"urlbar-container\",\"umatrix_raymondhill_net-browser-action\",\"ublock0_raymondhill_net-browser-action\"],\"toolbar-menubar\":[\"menubar-items\"],\"TabsToolbar\":[\"tabbrowser-tabs\",\"new-tab-button\",\"downloads-button\",\"alltabs-button\"],\"PersonalToolbar\":[\"personal-bookmarks\"]},\"seen\":[\"umatrix_raymondhill_net-browser-action\",\"ublock0_raymondhill_net-browser-action\",\"developer-button\"],\"dirtyAreaCache\":[\"nav-bar\",\"TabsToolbar\"],\"currentVersion\":16,\"newElementCount\":3}"); user_pref("browser.uidensity", 1);
+user_pref("browser.uiCustomization.state", '{"placements":{"widget-overflow-fixed-list":[],"nav-bar":["back-button","forward-button","urlbar-container","umatrix_raymondhill_net-browser-action","ublock0_raymondhill_net-browser-action","_3c9b993f-29b9-44c2-a913-def7b93a70b1_-browser-action","_testpilot-containers-browser-action","cookieautodelete_kennydo_com-browser-action","addon_darkreader_org-browser-action","jid1-kkzogwgsw3ao4q_jetpack-browser-action","keepassxc-browser_keepassxc_org-browser-action","sponsorblocker_ajay_app-browser-action","_74145f27-f039-47ce-a470-a662b129930a_-browser-action","_b9db16a4-6edc-47ec-a1f4-b86292ed211d_-browser-action"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button","downloads-button","alltabs-button"],"PersonalToolbar":["personal-bookmarks"]},"seen":["umatrix_raymondhill_net-browser-action","ublock0_raymondhill_net-browser-action","developer-button","save-to-pocket-button","_3c9b993f-29b9-44c2-a913-def7b93a70b1_-browser-action","_testpilot-containers-browser-action","cookieautodelete_kennydo_com-browser-action","addon_darkreader_org-browser-action","jid1-kkzogwgsw3ao4q_jetpack-browser-action","keepassxc-browser_keepassxc_org-browser-action","sponsorblocker_ajay_app-browser-action","_74145f27-f039-47ce-a470-a662b129930a_-browser-action","_b9db16a4-6edc-47ec-a1f4-b86292ed211d_-browser-action"],"dirtyAreaCache":["nav-bar","TabsToolbar","toolbar-menubar","PersonalToolbar"],"currentVersion":18,"newElementCount":4}');
+user_pref("browser.uidensity", 1);
 user_pref("browser.uitour.enabled", false);
 user_pref("browser.uitour.url", "");
 user_pref("general.smoothScroll", false);
@@ -1703,3 +1704,5 @@ user_pref("browser.tabs.warnOnClose", false);
 user_pref("browser.tabs.warnOnOpen", false);
 user_pref("browser.tabs.warnOnCloseOtherTabs", false);
 user_pref("browser.warnOnQuit", false);
+user_pref("general.smoothScroll", true);
+user_pref("layout.frame_rate", 144);
