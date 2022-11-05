@@ -1,4 +1,3 @@
-keycode 64 = Mode_switch Multi_key
 keycode 108 = Mode_switch Multi_key
 keycode 39 = s S ssharp
 keycode 38 = a A adiaeresis Adiaeresis
