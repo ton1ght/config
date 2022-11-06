@@ -1,1 +1,2 @@
-feh --no-fehbg --bg-scale /mnt/Private/pictures/wallpaper/dracula.png
+feh --bg-fill ~/pictures/wallpaper/landscape.webp --bg-fill ~/pictures/wallpaper/solid-grey.jpeg
+
