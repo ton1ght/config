@@ -25,7 +25,7 @@ ncmpcpp
 zsh
 quit")
 
-choice=$(echo -e "${options[@]}" | rofi -dmenu  -i -p 'Edit config file')
+choice=$(echo -e "${options[@]}" | rofi -dmenu  -i -p ' ')
 
 case "$choice" in
 	quit)
