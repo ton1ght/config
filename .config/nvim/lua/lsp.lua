@@ -75,6 +75,8 @@ require'lspconfig'.texlab.setup{coq.lsp_ensure_capabilities{
 
 require'lspconfig'.bashls.setup{coq.lsp_ensure_capabilities{}}
 
+require'lspconfig'.marksman.setup{}
+
 
 -- this is for diagnositcs signs on the line number column
 -- use this to beautify the plain E W signs to more fun ones
