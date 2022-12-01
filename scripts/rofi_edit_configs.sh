@@ -9,10 +9,8 @@
 
 declare options=("alacritty
 picom
-redshift
 xmodmap
-bspwm
-sxhkd
+htop
 dunst
 i3
 mpd
@@ -43,17 +41,11 @@ case "$choice" in
 	i3status)
 		choice="$HOME/.config/i3status/config"
 	;;
-	redshift)
-		choice="$HOME/.config/redshift/redshift.conf"
-	;;
 	xmodmap)
 		choice="$HOME/.Xmodmap"
 	;;
-	bspwm)
-		choice="$HOME/.config/bspwm/bspwmrc"
-	;;
-	sxhkd)
-		choice="$HOME/.config/sxhkd/sxhkdrc"
+	htop)
+		choice="$HOME/.config/htop/htoprc"
 	;;
 	picom)
 		choice="$HOME/.config/picom/picom.conf"

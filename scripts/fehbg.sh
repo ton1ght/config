@@ -1,2 +1,2 @@
-feh --bg-fill ~/pictures/wallpaper/landscape.webp --bg-fill ~/pictures/wallpaper/solid-grey.jpeg
+feh --bg-fill ~/pictures/wallpaper/landscape.jpg --bg-fill ~/pictures/wallpaper/solid-grey.jpeg
 

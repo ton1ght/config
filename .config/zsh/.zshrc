@@ -16,8 +16,8 @@ bindkey -M vicmd v edit-command-line
 autoload -Uz compinit && compinit
 
 # aliases
-alias ls='exa -l --color=auto --group-directories-first'
-alias ll='exa -al --color=auto --group-directories-first'
+alias ls='exa -l --color=auto --group-directories-first --icons'
+alias ll='exa -al --color=auto --group-directories-first --icons'
 alias vim="nvim"
 alias nc="ncmpcpp"
 alias pm="pulsemixer"
