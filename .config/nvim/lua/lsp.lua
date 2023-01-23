@@ -47,20 +47,22 @@ lspconfig.ccls.setup {
     }
 }
 
-require'lspconfig'.pylsp.setup{
-    coq.lsp_ensure_capabilities {
-      settings = {
-        pylsp = {
-          plugins = {
-            pycodestyle = {
-              ignore = {'W391'},
-              maxLineLength = 100
-            }
-          }
-        }
-    }
-  }
-}
+require'lspconfig'.pyright.setup{coq.lsp_ensure_capabilities{}}
+
+-- require'lspconfig'.pylsp.setup{
+--     coq.lsp_ensure_capabilities {
+--       settings = {
+--         pylsp = {
+--           plugins = {
+--             pycodestyle = {
+--               ignore = {'W391'},
+--               maxLineLength = 100
+--             }
+--           }
+--         }
+--     }
+--   }
+-- }
 
 require'lspconfig'.texlab.setup{coq.lsp_ensure_capabilities{
     settings = {
