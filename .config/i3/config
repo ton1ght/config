@@ -32,6 +32,7 @@ exec --no-startup-id dunst
 exec --no-startup-id birdtray
 exec --no-startup-id picom
 exec --no-startup-id keepassxc
+exec --no-startup-id kdeconnect-indicator
 exec --no-startup-id nm-applet
 exec --no-startup-id owncloud
 exec --no-startup-id protonmail-bridge --noninteractive
