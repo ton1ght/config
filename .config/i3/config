@@ -51,8 +51,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
 
-bindsym $mod+x exec --no-startup-id i3lock -i ~/pictures/dracula_2560x1440.png && xset dpms force off
-bindsym $mod+Shift+x exec --no-startup-id i3lock -i ~/pictures/dracula_2560x1440.png && systemctl suspend
+bindsym $mod+x exec --no-startup-id i3lock -B 5
+bindsym $mod+Shift+x exec --no-startup-id i3lock -B 5 && systemctl suspend
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
