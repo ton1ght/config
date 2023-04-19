@@ -23,4 +23,9 @@ noremap <Leader>p "*p
 noremap <Leader>Y "+y
 noremap <Leader>P "+p
 
+nnoremap <M-h> :CoqStart<CR>
+nnoremap <M-j> :CoqNext<CR>
+nnoremap <M-k> :CoqUndo<CR>
+nnoremap <M-l> :CoqToLine<CR>
+
 autocmd BufWritePost *.tex TexlabBuild
