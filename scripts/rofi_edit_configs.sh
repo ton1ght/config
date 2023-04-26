@@ -16,6 +16,7 @@ i3
 mpd
 ranger
 vim
+zathura
 polybar
 rofi
 xresources
@@ -73,6 +74,9 @@ case "$choice" in
 	;;
 	zsh)
 		choice="$ZDOTDIR/.zshrc"
+	;;
+	zathura)
+		choice="$HOME/.config/zathura/zathurarc"
 	;;
 	*)
 		exit 1
