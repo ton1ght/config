@@ -1,6 +1,6 @@
 configuration {
 	modi: "window,ssh,drun";
-	font: "Arimo Nerd Font 18";
+	font: "JetBrainsMono Nerd Font 18";
 	show-icons: true;
         show-match: false;
 	terminal: "alacritty";
