@@ -38,7 +38,7 @@ exec --no-startup-id owncloud
 exec --no-startup-id protonmail-bridge --noninteractive
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id xmodmap ~/.Xmodmap
-exec_always --no-startup-id ~/scripts/setup_monitor.sh
+exec_always --no-startup-id ~/scripts/polybar_launch.sh
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
