@@ -7,3 +7,9 @@
 [submodule ".config/zsh/zsh-completions"]
 	path = .config/zsh/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions
+[submodule ".config/alacritty/alacritty"]
+	path = .config/alacritty/alacritty
+	url = https://github.com/catppuccin/alacritty
+[submodule ".config/alacritty/catppuccin"]
+	path = .config/alacritty/catppuccin
+	url = https://github.com/catppuccin/alacritty
