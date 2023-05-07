@@ -1,5 +1,4 @@
 #!/bin/bash
 
-feh --bg-fill ~/pictures/wallpaper/landscape.jpg --bg-fill ~/pictures/wallpaper/solid-grey.jpeg
-
-# $HOME/scripts/polybar_launch.sh
+$HOME/scripts/fehbg.sh
+$HOME/scripts/polybar_launch.sh

@@ -43,10 +43,10 @@ fpath+=$HOME/.config/zsh/zsh-completions/src
 source $HOME/.config/zsh/zsh-completions/zsh-completions.plugin.zsh
 
 # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
+# BASE16_SHELL="$HOME/.config/base16-shell/"
+# [ -n "$PS1" ] && \
+#     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+#         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 # CTRL-R - Paste the selected command from history into the command line
 __fzfcmd() {

@@ -6,6 +6,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'whonore/Coqtail'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
@@ -24,6 +25,7 @@ call plug#end()
 
 " PLUGIN SETTINGS
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'catppuccin'
 let g:airline_theme='base16'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#disable_rtp_load=1

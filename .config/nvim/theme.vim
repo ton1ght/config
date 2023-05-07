@@ -1,6 +1,6 @@
 " THEME
 let base16colorspace=256
-colorscheme base16-dracula
+colorscheme catppuccin-mocha
 autocmd VimEnter * hi Normal ctermbg=none
 set signcolumn=yes
 " highlight Visual ctermbg=18
