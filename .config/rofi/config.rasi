@@ -8,4 +8,4 @@ configuration {
         display-drun: " ";
 }
 
-@theme "transparent"
+@theme "catppuccin-mocha"

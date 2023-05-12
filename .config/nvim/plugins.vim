@@ -26,7 +26,7 @@ call plug#end()
 " PLUGIN SETTINGS
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'catppuccin'
-let g:airline_theme='base16'
+" let g:airline_theme='base16'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#disable_rtp_load=1
 
