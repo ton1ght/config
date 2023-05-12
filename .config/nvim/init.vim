@@ -17,16 +17,9 @@ set noshowmode
 set noswapfile
 syntax on
 
-
 source ~/.config/nvim/mappings.vim
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/theme.vim
 
-" augroup CoqtailHighlights
-"   autocmd!
-"   autocmd ColorScheme *
-"     \  hi def CoqtailChecked ctermbg=19
-"     \| hi def CoqtailSent    ctermbg=18
-" augroup END
 
 lua require("lsp")
