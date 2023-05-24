@@ -12,10 +12,10 @@
 set $mod Mod4
 
 for_window [class=".*"] border pixel 2
-smart_borders on
-smart_gaps off
+# smart_borders on
+# smart_gaps off
 
-gaps inner 0
+# gaps inner 0
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
