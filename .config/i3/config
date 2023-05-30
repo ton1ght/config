@@ -38,6 +38,7 @@ exec --no-startup-id owncloud
 exec --no-startup-id protonmail-bridge --noninteractive
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id ~/scripts/fehbg.sh
+exec --no-startup-id autorandr --change
 exec_always --no-startup-id xmodmap ~/.Xmodmap
 exec_always --no-startup-id ~/scripts/polybar_launch.sh
 
@@ -52,14 +53,14 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
 
-bindsym $mod+x exec --no-startup-id i3lock -B 5
-bindsym $mod+Shift+x exec --no-startup-id i3lock -B 5 && systemctl suspend
+bindsym $mod+x exec --no-startup-id i3lock 5
+bindsym $mod+Shift+x exec --no-startup-id i3lock 5 && systemctl suspend
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec alacritty -e "zsh"
 
 # start a terminal
 bindsym $mod+Shift+d exec ~/scripts/rofi_edit_configs.sh
