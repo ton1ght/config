@@ -24,8 +24,8 @@ alias pm="pulsemixer"
 alias ip="ip -color=auto"
 alias grep="grep --color=auto"
 alias diff='diff --color=auto'
-alias dotfiles='/usr/bin/git --git-dir=/home/ton1ght/.cfg/ --work-tree=/home/ton1ght'
 alias ranger='. ranger'
+alias dotfiles='/usr/bin/git --git-dir=/home/$USER/.cfg/ --work-tree=/home/$USER'
 
 # exports
 export LC_ALL=en_US.UTF-8
