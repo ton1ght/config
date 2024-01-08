@@ -8,6 +8,6 @@ set signcolumn=yes
 " highlight Normal ctermfg=white
 "
 
-hi CoqtailChecked guibg=SkyBlue guifg=Black
-hi CoqtailSent guibg=Gray guifg=Black
+hi CoqtailChecked guibg=Green
+hi CoqtailSent guibg=Gray
 

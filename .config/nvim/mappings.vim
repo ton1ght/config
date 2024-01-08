@@ -28,4 +28,4 @@ nnoremap <M-j> :CoqNext<CR>
 nnoremap <M-k> :CoqUndo<CR>
 nnoremap <M-l> :CoqToLine<CR>
 
-autocmd BufWritePost *.tex TexlabBuild
+" autocmd BufWritePost *.tex TexlabBuild
