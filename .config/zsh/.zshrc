@@ -26,6 +26,7 @@ alias grep="grep --color=auto"
 alias diff='diff --color=auto'
 alias ranger='. ranger'
 alias dotfiles='/usr/bin/git --git-dir=/home/$USER/.cfg/ --work-tree=/home/$USER'
+alias oot='(cd /home/ton1ght/repos/shipwright/ && ./soh.appimage)'
 
 # exports
 export LC_ALL=en_US.UTF-8
@@ -42,6 +43,15 @@ fpath+=$HOME/.config/zsh/pure
 source $HOME/.config/zsh/pure/pure.plugin.zsh
 fpath+=$HOME/.config/zsh/zsh-completions/src
 source $HOME/.config/zsh/zsh-completions/zsh-completions.plugin.zsh
+
+
+if [ ${RANGER_LEVEL:-0} -ne 0 ]; then
+    RPROMPT=""
+else
+    RPROMPT=""
+fi
+
+
 
 # Base16 Shell
 # BASE16_SHELL="$HOME/.config/base16-shell/"
