@@ -11,6 +11,7 @@ return {
                     "pyright",
                     "clangd",
                     "bashls",
+                    "lua_ls",
                 }
             })
         end,

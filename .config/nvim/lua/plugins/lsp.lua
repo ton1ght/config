@@ -1,5 +1,8 @@
 return {
     "neovim/nvim-lspconfig",
+    dependencies = {
+        "hrsh7th/cmp-nvim-lsp"
+    },
     config = function()
 
         vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError' })
@@ -68,9 +71,24 @@ return {
             end,
             -- Next, you can provide a dedicated handler for specific servers.
             -- For example, a handler override for the `rust_analyzer`:
-            -- ["rust_analyzer"] = function ()
-            --     require("rust-tools").setup {}
-            -- end
+            ["lua_ls"] = function ()
+                require("lspconfig")["lua_ls"].setup {
+                    settings = {
+                        Lua = {
+                            diagnostics = {
+                                -- Get the language server to recognize the `vim` global
+                                globals = {
+                                    'vim',
+                                },
+                            },
+                            -- Do not send telemetry data containing a randomized but unique identifier
+                            telemetry = {
+                                enable = false,
+                            },
+                        },
+                    },
+                }
+            end
         }
     end,
 }
