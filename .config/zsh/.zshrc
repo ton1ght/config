@@ -19,13 +19,11 @@ autoload -Uz compinit && compinit
 alias ls='exa -l --color=auto --group-directories-first --icons'
 alias ll='exa -al --color=auto --group-directories-first --icons'
 alias vim="nvim"
-alias nc="ncmpcpp"
 alias pm="pulsemixer"
 alias ip="ip -color=auto"
 alias grep="grep --color=auto"
 alias diff='diff --color=auto'
 alias ranger='. ranger'
-alias dotfiles='/usr/bin/git --git-dir=/home/$USER/.cfg/ --work-tree=/home/$USER'
 alias oot='(cd /home/ton1ght/repos/shipwright/ && ./soh.appimage)'
 
 # exports
@@ -35,7 +33,6 @@ export LANGUAGE=en_US.UTF-8
 export EDITOR="nvim"
 export MANPAGER='less -s -M +Gg'
 export PATH=$PATH:/home/ton1ght/scripts:/home/ton1ght/.local/bin
-export SSH_AUTH_SOCK=/run/user/$(id -u)/gcr/ssh
 
 # plugins
 source $HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
@@ -43,7 +40,6 @@ fpath+=$HOME/.config/zsh/pure
 source $HOME/.config/zsh/pure/pure.plugin.zsh
 fpath+=$HOME/.config/zsh/zsh-completions/src
 source $HOME/.config/zsh/zsh-completions/zsh-completions.plugin.zsh
-
 
 if [ ${RANGER_LEVEL:-0} -ne 0 ]; then
     RPROMPT=""
