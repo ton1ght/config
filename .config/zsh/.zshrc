@@ -15,9 +15,13 @@ bindkey -M vicmd v edit-command-line
 # enabe history
 autoload -Uz compinit && compinit
 
+
+alias ls="ls -l --color=auto --group-directories-first"
+if command -v exa &> /dev/null; then
+    alias ls="exa -l --color=auto --group-directories-first --icons"
+fi
+
 # aliases
-alias ls='exa -l --color=auto --group-directories-first --icons'
-alias ll='exa -al --color=auto --group-directories-first --icons'
 alias vim="nvim"
 alias pm="pulsemixer"
 alias ip="ip -color=auto"
