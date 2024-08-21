@@ -34,6 +34,7 @@ return {
 					"clangd", -- c/cpp lsp
 					"bashls", -- bash lsp
 					"lua_ls", -- lua lsp
+					"texlab", -- latex lsp
 
 					"shellcheck", -- bash linter
 
