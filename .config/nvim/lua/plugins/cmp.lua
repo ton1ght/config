@@ -5,14 +5,22 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-cmdline",
 		"onsails/lspkind.nvim",
+		{ "L3MON4D3/LuaSnip", build = "make install_jsregexp" },
+		"saadparwaiz1/cmp_luasnip",
 	},
 	config = function()
 		local cmp = require("cmp")
 		local lspkind = require("lspkind")
 
 		cmp.setup({
+			snippet = {
+				expand = function(args)
+					require("luasnip").lsp_expand(args.body)
+				end,
+			},
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
+				{ name = "luasnip" },
 				{ name = "path" },
 				{ name = "cmdline" },
 			}),
