@@ -38,6 +38,10 @@ export EDITOR="nvim"
 export MANPAGER='less -s -M +Gg'
 export PATH=$PATH:/home/ton1ght/scripts:/home/ton1ght/.local/bin
 
+if [ -z $SSH_AUTH_SOCK ]; then
+    export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
+fi
+
 # plugins
 source $HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 fpath+=$HOME/.config/zsh/pure
