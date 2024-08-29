@@ -10,25 +10,57 @@ return {
 
 		config = function()
 			local ls = require("luasnip")
-			ls.filetype_extend("javascript", { "jsdoc" })
 
-			--- TODO: What is expand?
-			vim.keymap.set({ "i" }, "<C-s>e", function()
-				ls.expand()
-			end, { silent = true })
-
-			vim.keymap.set({ "i", "s" }, "<C-s>;", function()
-				ls.jump(1)
-			end, { silent = true })
-			vim.keymap.set({ "i", "s" }, "<C-s>,", function()
-				ls.jump(-1)
-			end, { silent = true })
-
-			vim.keymap.set({ "i", "s" }, "<C-E>", function()
-				if ls.choice_active() then
-					ls.change_choice(1)
+			-- Function to handle tab mappings
+			local function expand_or_jump()
+				if ls.expand_or_jumpable() then
+					ls.expand_or_jump()
 				end
-			end, { silent = true })
+			end
+
+			-- Function to handle shift-tab mappings
+			local function jump_back()
+				if ls.jumpable(-1) then
+					ls.jump(-1)
+				end
+			end
+
+			-- Set up key mappings
+			vim.keymap.set({ "i", "s" }, "<Tab>", expand_or_jump, { noremap = true, silent = true })
+			vim.keymap.set({ "i", "s" }, "<S-Tab>", jump_back, { noremap = true, silent = true })
+
+			-- Define LaTeX snippets
+			ls.add_snippets(
+				-- Define snippets for LaTeX
+				"tex",
+				{
+					-- \texttt{}
+					ls.snippet("tt", {
+						ls.t("\\texttt{"),
+						ls.i(1), -- Placeholder for user input
+						ls.t("}"),
+					}),
+
+					-- \textit{}
+					ls.snippet("it", {
+						ls.t("\\textit{"),
+						ls.i(1), -- Placeholder for user input
+						ls.t("}"),
+					}),
+
+					-- \textbf{}
+					ls.snippet("bf", {
+						ls.t("\\textbf{"),
+						ls.i(1), -- Placeholder for user input
+						ls.t("}"),
+					}),
+				},
+				{
+					key = "tex",
+				}
+			)
+			-- load friendly-snippets
+			require("luasnip.loaders.from_vscode").lazy_load()
 		end,
 	},
 }
