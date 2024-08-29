@@ -54,6 +54,12 @@ return {
 						ls.i(1), -- Placeholder for user input
 						ls.t("}"),
 					}),
+					-- \ac{}
+					ls.snippet("ac", {
+						ls.t("\\ac{"),
+						ls.i(1), -- Placeholder for user input
+						ls.t("}"),
+					}),
 				},
 				{
 					key = "tex",
