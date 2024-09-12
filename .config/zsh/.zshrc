@@ -17,8 +17,8 @@ autoload -Uz compinit && compinit
 
 
 alias ls="ls -l --color=auto --group-directories-first"
-if command -v exa &> /dev/null; then
-    alias ls="exa -l --color=auto --group-directories-first --icons"
+if command -v eza &> /dev/null; then
+    alias ls="eza -l --color=auto --group-directories-first --icons"
 fi
 
 # aliases
