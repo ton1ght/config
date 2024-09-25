@@ -35,6 +35,7 @@ return {
 					"bashls", -- bash lsp
 					"lua_ls", -- lua lsp
 					"texlab", -- latex lsp
+					"rust_analyzer", -- rust lsp
 
 					"shellcheck", -- bash linter
 
