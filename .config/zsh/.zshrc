@@ -84,3 +84,8 @@ bindkey '^R' fzf-history-widget
 function config {
    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
+
+
+if [ -f $ZDOTDIR/.zshrc_work ]; then
+    source $ZDOTDIR/.zshrc_work
+fi
