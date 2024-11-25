@@ -89,3 +89,7 @@ function config {
 if [ -f $ZDOTDIR/.zshrc_work ]; then
     source $ZDOTDIR/.zshrc_work
 fi
+
+if command -v bat 2>&1 >/dev/null; then
+    alias cat='bat --theme="Catppuccin Mocha"'
+fi
