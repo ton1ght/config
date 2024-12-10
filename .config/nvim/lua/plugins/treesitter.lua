@@ -1,14 +1,27 @@
 return {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    config = function ()
-        local configs = require("nvim-treesitter.configs")
+	"nvim-treesitter/nvim-treesitter",
+	build = ":TSUpdate",
+	config = function()
+		local configs = require("nvim-treesitter.configs")
 
-        configs.setup({
-            ensure_installed = { "c", "lua", "vim", "vimdoc", "cpp", "python", "bitbake", "markdown", "markdown_inline", "bash", "html" },
-            sync_install = false,
-            highlight = { enable = true },
-            indent = { enable = true },
-        })
-    end
+		configs.setup({
+			ensure_installed = {
+				"c",
+				"lua",
+				"vim",
+				"vimdoc",
+				"cpp",
+				"python",
+				"bitbake",
+				"markdown",
+				"markdown_inline",
+				"bash",
+				"html",
+				"diff",
+			},
+			sync_install = false,
+			highlight = { enable = true },
+			indent = { enable = true },
+		})
+	end,
 }
