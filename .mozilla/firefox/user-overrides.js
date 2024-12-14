@@ -20,3 +20,17 @@ user_pref("browser.urlbar.suggest.bookmark", false);
 user_pref("browser.urlbar.suggest.openpage", false);
 user_pref("browser.urlbar.suggest.topsites", false);
 user_pref("browser.sessionstore.resume_from_crash", false);
+user_pref("dom.allow_cut_copy", true);
+
+user_pref("general.smoothScroll", true);
+user_pref("general.smoothScroll.currentVelocityWeighting", 0.15);
+user_pref("general.smoothScroll.mouseWheel.durationMaxMS", 250);
+user_pref("general.smoothScroll.mouseWheel.durationMinMS", 250);
+user_pref("general.smoothScroll.msdPhysics.enabled", true);
+user_pref("general.smoothScroll.msdPhysics.motionBeginSpringConstant", 400);
+user_pref("general.smoothScroll.msdPhysics.regularSpringConstant", 600);
+user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaMS", 120);
+user_pref("general.smoothScroll.other.durationMaxMS", 500);
+user_pref("general.smoothScroll.pages.durationMaxMS", 350);
+user_pref("general.smoothScroll.stopDecelerationWeighting", 0.8);
+user_pref("mousewheel.min_line_scroll_amount", 22);
