@@ -4,15 +4,15 @@
 [submodule ".config/zsh/pure"]
 	path = .config/zsh/pure
 	url = https://github.com/sindresorhus/pure
+    branch = main
 [submodule ".config/zsh/zsh-completions"]
 	path = .config/zsh/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions
-[submodule ".config/alacritty/alacritty"]
-	path = .config/alacritty/alacritty
-	url = https://github.com/catppuccin/alacritty
-[submodule ".config/alacritty/catppuccin"]
-	path = .config/alacritty/catppuccin
-	url = https://github.com/catppuccin/alacritty
 [submodule ".config/zathura/zathura"]
 	path = .config/zathura/zathura
 	url = https://github.com/catppuccin/zathura
+    branch = main
+[submodule ".config/alacritty/alacritty"]
+	path = .config/alacritty/alacritty
+	url = https://github.com/catppuccin/alacritty
+    branch = main
