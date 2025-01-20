@@ -13,3 +13,6 @@
 [submodule ".config/alacritty/catppuccin"]
 	path = .config/alacritty/catppuccin
 	url = https://github.com/catppuccin/alacritty
+[submodule ".config/zathura/zathura"]
+	path = .config/zathura/zathura
+	url = https://github.com/catppuccin/zathura

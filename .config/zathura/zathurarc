@@ -3,5 +3,6 @@ set adjust-open "best-fit"
 set render-loading "false"
 map t toggle_statusbar
 set selection-clipboard clipboard
-set recolor-lightcolor \#1e1e2e
 set recolor-keephue
+
+include zathura/src/catppuccin-mocha
