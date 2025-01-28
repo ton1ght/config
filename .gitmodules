@@ -16,3 +16,6 @@
 	path = .config/alacritty/alacritty
 	url = https://github.com/catppuccin/alacritty
     branch = main
+[submodule ".config/sioyek/sioyek"]
+	path = .config/sioyek/sioyek
+	url = https://github.com/catppuccin/sioyek
