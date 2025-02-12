@@ -18,6 +18,8 @@ return {
 				"bash",
 				"html",
 				"diff",
+				"bibtex",
+				"latex",
 			},
 			sync_install = false,
 			highlight = { enable = true },
