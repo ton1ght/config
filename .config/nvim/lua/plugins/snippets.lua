@@ -60,6 +60,10 @@ return {
 						ls.i(1), -- Placeholder for user input
 						ls.t("}"),
 					}),
+					-- et\,al.
+					ls.snippet("etal", {
+						ls.t("et\\,al."),
+					}),
 				},
 				{
 					key = "tex",
