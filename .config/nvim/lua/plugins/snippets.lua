@@ -64,6 +64,14 @@ return {
 					ls.snippet("etal", {
 						ls.t("et\\,al."),
 					}),
+					-- e.\,g.,
+					ls.snippet("eg", {
+						ls.t("e.\\,g.,"),
+					}),
+					-- i.\,e.,
+					ls.snippet("ie", {
+						ls.t("i.\\,e.,"),
+					}),
 				},
 				{
 					key = "tex",
