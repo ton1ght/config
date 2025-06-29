@@ -2,7 +2,7 @@
 HISTFILE=$ZDOTDIR/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
-setopt autocd extendedglob nomatch
+setopt autocd extendedglob nomatch share_history
 
 # set vi key bindings
 bindkey -v
