@@ -35,3 +35,6 @@ vim.opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 vim.opt.wrap = false
 vim.opt.pumheight = 10
 vim.opt.showmode = false
+
+-- tex
+vim.g.tex_flavor = "latex"
