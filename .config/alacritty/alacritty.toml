@@ -25,7 +25,7 @@ mods = "Control|Shift"
 
 [window]
 dynamic_title = true
-opacity = 0.9
+opacity = 1
 
 [general]
 import = ["~/.config/alacritty/alacritty/catppuccin-mocha.toml"]
