@@ -24,3 +24,6 @@ vim.keymap.set("n", "<S-k>", "<cmd>m-2<CR>", { desc = "Move line down" })
 vim.keymap.set("n", "<leader>bca", "<cmd>%bd<cr>", { desc = "Buffer close all" })
 vim.keymap.set("n", "<leader>bco", "<cmd>%bd|#e|bd#<cr>", { desc = "Buffer close others" })
 vim.keymap.set("n", "<leader>bcc", "<cmd>bd<cr>", { desc = "Buffer close" })
+
+--- texlab
+vim.keymap.set("n", "<F12>", ":TexlabBuild<CR>", { noremap = true, silent = true })
