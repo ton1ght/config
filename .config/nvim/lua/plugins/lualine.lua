@@ -5,9 +5,12 @@ return {
 		require("lualine").setup({
 			options = {
 				component_separators = { left = "", right = "" },
-				section_separators = { left = "", right = "" },
+				section_separators = { left = "", right = "" },
 			},
 			sections = {
+				lualine_a = {
+					{ "mode", separator = { left = "", right = "" } },
+				},
 				lualine_b = {
 					{
 						"diagnostics",
@@ -15,6 +18,9 @@ return {
 					},
 				},
 				lualine_x = { "filetype" },
+				lualine_z = {
+					{ "location", separator = { left = "", right = "" } },
+				},
 			},
 		})
 	end,
