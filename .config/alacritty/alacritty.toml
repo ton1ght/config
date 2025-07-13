@@ -1,6 +1,6 @@
 
 [font]
-size = 13.0
+size = 14.0
 
 [font.bold]
 family = "JetBrainsMono Nerd Font"
@@ -29,3 +29,6 @@ opacity = 1
 
 [general]
 import = ["~/.config/alacritty/alacritty/catppuccin-mocha.toml"]
+
+[terminal.shell]
+program = "/sbin/tmux"
