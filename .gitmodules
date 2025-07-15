@@ -19,6 +19,3 @@
 [submodule ".config/sioyek/sioyek"]
 	path = .config/sioyek/sioyek
 	url = https://github.com/catppuccin/sioyek
-[submodule ".config/tmux/plugins/tpm"]
-	path = .config/tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
