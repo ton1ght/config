@@ -29,6 +29,3 @@ opacity = 1
 
 [general]
 import = ["~/.config/alacritty/alacritty/catppuccin-mocha.toml"]
-
-[terminal.shell]
-program = "/sbin/tmux"
