@@ -10,11 +10,20 @@ CONFIGS_FILE="$HOME/scripts/files/configs"
 populate_array() {
     local file="$1"
     local array_name="$2"
-
     eval "declare -gA ${array_name}"
 
-    while IFS='=' read -r key value; do
-        [ -n \"\$key\" ] && eval "${array_name}[\"\$key\"]=\"\$value\""
+    while IFS= read -r line; do
+        # Skip empty lines and comments
+        [[ -z "$line" || "$line" =~ ^\s*# ]] && continue
+
+        # Extract key and value using substring removal
+        key="${line%%=*}"
+        value="${line#*=}"
+
+        # Only add if key is non-empty
+        if [[ -n "$key" ]]; then
+            eval "${array_name}[\"\$key\"]=\"\$value\""
+        fi
     done <"$file"
 }
 
