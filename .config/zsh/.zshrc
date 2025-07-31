@@ -20,6 +20,9 @@ alias ls="ls -l --color=auto --group-directories-first"
 if command -v eza &> /dev/null; then
     alias ls="eza -l --color=auto --group-directories-first --icons"
 fi
+if command -v bat 2>&1 >/dev/null; then
+    alias cat='bat --theme="Catppuccin Mocha"'
+fi
 
 # aliases
 alias vim="nvim"
@@ -38,21 +41,25 @@ export EDITOR="nvim"
 export MANPAGER='less -s -M +Gg'
 export PATH=$PATH:/home/ton1ght/scripts:/home/ton1ght/.local/bin
 
-if [ -z $SSH_AUTH_SOCK ]; then
-    export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
-fi
-
 # plugins
-source $HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 fpath+=$HOME/.config/zsh/pure
 source $HOME/.config/zsh/pure/pure.plugin.zsh
 fpath+=$HOME/.config/zsh/zsh-completions/src
 source $HOME/.config/zsh/zsh-completions/zsh-completions.plugin.zsh
+source $HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+
+if [ -z $SSH_AUTH_SOCK ]; then
+    export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
+fi
 
 if [ ${RANGER_LEVEL:-0} -ne 0 ]; then
     RPROMPT=""
 else
     RPROMPT=""
+fi
+
+if [ -f $ZDOTDIR/.zshrc_work ]; then
+    source $ZDOTDIR/.zshrc_work
 fi
 
 # CTRL-R - Paste the selected command from history into the command line
@@ -84,12 +91,3 @@ bindkey '^R' fzf-history-widget
 function config {
    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
-
-
-if [ -f $ZDOTDIR/.zshrc_work ]; then
-    source $ZDOTDIR/.zshrc_work
-fi
-
-if command -v bat 2>&1 >/dev/null; then
-    alias cat='bat --theme="Catppuccin Mocha"'
-fi
