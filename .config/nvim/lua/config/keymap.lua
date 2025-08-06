@@ -27,3 +27,6 @@ vim.keymap.set("n", "<leader>bcc", "<cmd>bd<cr>", { desc = "Buffer close" })
 
 --- texlab
 vim.keymap.set("n", "<F12>", ":TexlabBuild<CR>", { noremap = true, silent = true })
+
+-- select
+vim.keymap.set("n", "gp", "`[v`]", { desc = "Select pasted text" })
