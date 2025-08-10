@@ -32,6 +32,7 @@ alias grep="grep --color=auto"
 alias diff='diff --color=auto'
 alias ranger='. ranger'
 alias oot='(cd /home/ton1ght/repos/shipwright/ && ./soh.appimage)'
+alias ms="master_session.sh"
 
 # exports
 export LC_ALL=en_US.UTF-8
