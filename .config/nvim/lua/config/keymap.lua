@@ -30,3 +30,6 @@ vim.keymap.set("n", "<F12>", ":TexlabBuild<CR>", { noremap = true, silent = true
 
 -- select
 vim.keymap.set("n", "gp", "`[v`]", { desc = "Select pasted text" })
+
+-- yank
+vim.keymap.set("n", "yp", ':let @+ = expand("%:p")<cr>', { desc = "Yank current filepath" })
