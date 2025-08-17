@@ -19,7 +19,7 @@ vim.opt.incsearch = true -- update search results while typing
 vim.opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 
 -- clipboard
-vim.opt.clipboard:append("unnamedplus") -- use system clipboard as default register
+-- vim.opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 
 -- no swap or backup files
 vim.opt.backup = false

@@ -33,3 +33,5 @@ vim.keymap.set("n", "gp", "`[v`]", { desc = "Select pasted text" })
 
 -- yank
 vim.keymap.set("n", "yp", ':let @+ = expand("%:p")<cr>', { desc = "Yank current filepath" })
+vim.keymap.set("n", "<leader>y", '"+y', { desc = "Yank to system clipboard" })
+vim.keymap.set("n", "<leader>p", '"+p', { desc = "Paste from system clipboard" })
