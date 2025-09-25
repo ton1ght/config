@@ -26,12 +26,16 @@ vim.keymap.set("n", "<leader>bco", "<cmd>%bd|#e|bd#<cr>", { desc = "Buffer close
 vim.keymap.set("n", "<leader>bcc", "<cmd>bd<cr>", { desc = "Buffer close" })
 
 --- texlab
-vim.keymap.set("n", "<F12>", ":TexlabBuild<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>tb", ":LspTexlabBuild<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>tf", ":LspTexlabForward<CR>", { noremap = true, silent = true })
 
 -- select
 vim.keymap.set("n", "gp", "`[v`]", { desc = "Select pasted text" })
 
 -- yank
 vim.keymap.set("n", "yp", ':let @+ = expand("%:p")<cr>', { desc = "Yank current filepath" })
-vim.keymap.set("n", "<leader>y", '"+y', { desc = "Yank to system clipboard" })
-vim.keymap.set("n", "<leader>p", '"+p', { desc = "Paste from system clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Yank to system clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "Paste from system clipboard" })
+
+-- misc
+vim.keymap.set('x', '<C-l>', "<cmd>lua print(vim.fn.wordcount().visual_words)<CR>")

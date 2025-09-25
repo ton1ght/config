@@ -1,0 +1,26 @@
+{
+    "Section": {
+        "prefix": "sec",
+        "body": [
+            "\\section{$1}\\label{sec:${1/([a-zA-Z]+)|([^a-zA-Z]+)/${1:/downcase}${2:+}/g}}",
+            "${0:$TM_SELECTED_TEXT}"
+        ],
+        "description": "Section"
+    },
+    "Sub Section": {
+        "prefix": "ssec",
+        "body": [
+            "\\subsection{$1}\\label{ssec:${1/([a-zA-Z]+)|([^a-zA-Z]+)/${1:/downcase}${2:+}/g}}",
+            "${0:$TM_SELECTED_TEXT}"
+        ],
+        "description": "Sub Section"
+    },
+    "Sub Sub Section": {
+        "prefix": "sssec",
+        "body": [
+            "\\subsubsection{${1:subsubsection name}}\\label{sec:${1/([a-zA-Z]+)|([^a-zA-Z]+)/${1:/downcase}${2:+}/g}}",
+            "${0:$TM_SELECTED_TEXT}"
+        ],
+        "description": "Sub Sub Section"
+    }
+}
