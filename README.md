@@ -3,9 +3,9 @@
 ## Setup config on new machine
 
 ```sh
-git clone --bare git@github.com:ton1ght/config.git $home/.cfg
+git clone --bare git@github.com:ton1ght/config.git $HOME/.cfg
 function config {
-   /usr/bin/git --git-dir=$home/.cfg/ --work-tree=$home $@
+   /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
 mkdir -p .config-backup
 config checkout
