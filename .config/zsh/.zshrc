@@ -41,6 +41,7 @@ export LANGUAGE=en_US.UTF-8
 export EDITOR="nvim"
 export MANPAGER='less -s -M +Gg'
 export PATH=$PATH:/home/ton1ght/scripts:/home/ton1ght/.local/bin
+export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 
 # plugins
 fpath+=$HOME/.config/zsh/pure
