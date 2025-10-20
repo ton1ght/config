@@ -1,6 +1,6 @@
 
 [font]
-size = 14
+size = 18
 
 [font.bold]
 family = "JetBrainsMono Nerd Font"
@@ -19,8 +19,8 @@ family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
 [font.offset]
-x = -1
-y = -1 
+x = -2
+y = -2 
 
 [[keyboard.bindings]]
 action = "SpawnNewInstance"
