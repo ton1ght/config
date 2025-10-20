@@ -93,3 +93,13 @@ bindkey '^R' fzf-history-widget
 function config {
    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
+
+# Convert a number to hexadecimal
+hex() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: hex <number>"
+    return 1
+  fi
+
+printf "0x%X\n" "$1"
+}
