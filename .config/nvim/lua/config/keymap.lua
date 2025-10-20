@@ -39,3 +39,4 @@ vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "Paste from system cli
 
 -- misc
 vim.keymap.set('x', '<C-l>', "<cmd>lua print(vim.fn.wordcount().visual_words)<CR>")
+vim.keymap.set("n", "gq", "vapgq", { desc = "Format paragraph" })
