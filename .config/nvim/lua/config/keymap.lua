@@ -40,3 +40,21 @@ vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "Paste from system cli
 -- misc
 vim.keymap.set('x', '<C-l>', "<cmd>lua print(vim.fn.wordcount().visual_words)<CR>")
 vim.keymap.set("n", "gq", "vapgq", { desc = "Format paragraph" })
+
+vim.keymap.set({ "n", "v", "x" }, "<leader>fr", [[:s/\V]], { desc = "Enter substitue mode in selection" })
+
+local function dec_to_hex(dec)
+  dec = tonumber(dec)
+  if not dec then return nil end
+  return string.format("0x%X", dec)
+end
+
+local function convert_word_to_hex()
+  local word = vim.fn.expand("<cword>")
+  local hex = dec_to_hex(word)
+  if hex then
+    vim.cmd("normal! ciw" .. hex)
+  end
+end
+
+vim.keymap.set("n", "<leader>x", convert_word_to_hex, { desc = "Convert word to hex" })
