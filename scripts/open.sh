@@ -1,6 +1,7 @@
 #!/bin/bash
 
 PAPER_DIR="$HOME/sciebo/master/Masterarbeit/Paper/"
+SPEC_DIR="$HOME/sciebo/master/Masterarbeit/Specifications/"
 PAPER_SUMMARY_DIR="$HOME/sciebo/master/Masterarbeit/Notes/Paper Summaries/"
 MANUAL_DIR="$HOME/sciebo/documents/manuals/"
 SEARCH_FILE="$HOME/scripts/files/search"
@@ -27,19 +28,28 @@ populate_array() {
     done <"$file"
 }
 
-CHOICES=("search" "bookmark" "paper" "summary" "manual" "config")
+CHOICES=("search" "bookmark" "paper" "summary" "manual" "config" "specification")
 
-if [ "$#" -ne 1 ]; then
+if [ "$#" -lt 1 ]; then
     echo "No argument given. Prompting for choice..."
-    ENGINE=$(printf "%s\n" "${CHOICES[@]}" | wofi -i --dmenu --prompt="Select an option:")
+    CHOICE=$(printf "%s\n" "${CHOICES[@]}" | wofi -i --dmenu --prompt="Select an option:")
 else
-    ENGINE="$1"
+    CHOICE="$1"
 fi
 
-case "$ENGINE" in
+if [ "$#" -eq 2 ]; then
+    ENGINE="$2"
+fi
+
+case "$CHOICE" in
 paper)
     SELECTION=$(find "$PAPER_DIR" -maxdepth 1 -type f -iname "*.pdf" -printf "%f\n" | wofi -i --dmenu --prompt="Select a paper:")
     COMMAND=(sioyek --new-instance "${PAPER_DIR}/${SELECTION}")
+    ;;
+
+specification)
+    SELECTION=$(find "$SPEC_DIR" -maxdepth 1 -type f -iname "*.pdf" -printf "%f\n" | wofi -i --dmenu --prompt="Select a specification:")
+    COMMAND=(sioyek --new-instance "${SPEC_DIR}/${SELECTION}")
     ;;
 
 summary)
@@ -61,9 +71,10 @@ bookmark)
 
 search)
     populate_array "$SEARCH_FILE" engines
-
-    ENGINE=$(printf "%s\n" "${!engines[@]}" | wofi --dmenu -p "Choose search engine:")
-    [ -z "$ENGINE" ] && exit 1
+    if [ -z "$ENGINE"]; then
+        ENGINE=$(printf "%s\n" "${!engines[@]}" | wofi --dmenu -p "Choose search engine:")
+        [ -z "$ENGINE" ] && exit 1
+    fi
 
     SELECTION=$(wofi --dmenu -p "Enter search query:")
     COMMAND=(firefox "${engines[$ENGINE]}${SELECTION}")
