@@ -6,3 +6,6 @@ set selection-clipboard clipboard
 
 include zathura/src/catppuccin-mocha
 set recolor "false"
+
+set synctex true
+set synctex-editor-command 'nvim --server /tmp/nvimtex --remote-send "<C-\><C-N>:e %{input}<CR>:%{line}<CR>"'
