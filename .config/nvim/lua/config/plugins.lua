@@ -23,11 +23,26 @@ vim.pack.add({
 
 vim.cmd("colorscheme catppuccin")
 
+vim.api.nvim_create_user_command("TodoHere", function()
+  require("telescope.builtin").live_grep{
+    default_text = [[TODO]],
+    search_dirs = { vim.api.nvim_buf_get_name(0) },
+  }
+end, {})
+
+vim.api.nvim_create_user_command("TodoAll", function()
+  require("telescope.builtin").live_grep{
+    default_text = [[TODO]],
+  }
+end, {})
+
 vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files, { desc = "Find Files" })
 vim.keymap.set("n", "<leader>fg", require("telescope.builtin").live_grep, { desc = "Live Grep" })
 vim.keymap.set("n", "<leader>fb", require("telescope.builtin").buffers, { desc = "Buffers" })
 vim.keymap.set("n", "<leader>fh", require("telescope.builtin").help_tags, { desc = "Help Tags" })
 vim.keymap.set("n", "<leader>fs", require("telescope.builtin").lsp_document_symbols, { desc = "Find Symbols" })
+vim.keymap.set("n", "<leader>fth", "<cmd>TodoHere<cr>", { desc = "Find Todos in Buffer" })
+vim.keymap.set("n", "<leader>fta", "<cmd>TodoAll<cr>", { desc = "Find Todos" })
 
 require("telescope").setup({
     defaults = {
