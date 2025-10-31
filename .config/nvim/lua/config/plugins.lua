@@ -41,6 +41,7 @@ vim.keymap.set("n", "<leader>fg", require("telescope.builtin").live_grep, { desc
 vim.keymap.set("n", "<leader>fb", require("telescope.builtin").buffers, { desc = "Buffers" })
 vim.keymap.set("n", "<leader>fh", require("telescope.builtin").help_tags, { desc = "Help Tags" })
 vim.keymap.set("n", "<leader>fs", require("telescope.builtin").lsp_document_symbols, { desc = "Find Symbols" })
+vim.keymap.set("n", "<leader>fr", require("telescope.builtin").lsp_references, { desc = "Find References" })
 vim.keymap.set("n", "<leader>fth", "<cmd>TodoHere<cr>", { desc = "Find Todos in Buffer" })
 vim.keymap.set("n", "<leader>fta", "<cmd>TodoAll<cr>", { desc = "Find Todos" })
 
