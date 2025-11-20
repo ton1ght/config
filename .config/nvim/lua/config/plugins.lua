@@ -12,6 +12,7 @@ vim.pack.add({
     { src = "https://github.com/latex-lsp/texlab" },
     { src = "https://github.com/ThePrimeagen/harpoon" },
     { src = "https://github.com/rafamadriz/friendly-snippets" },
+    { src = "https://github.com/christoomey/vim-tmux-navigator" },
     {
       src = "https://github.com/L3MON4D3/LuaSnip",
       dependencies = { "rafamadriz/friendly-snippets" },
@@ -106,6 +107,10 @@ end)
 
 vim.keymap.set("n", "<A-->", function()
     require("harpoon.ui").nav_file(11)
+end)
+
+vim.keymap.set("n", "<A-a>", function()
+    require("harpoon.ui").nav_file(12)
 end)
 
 require('gitsigns').setup{
