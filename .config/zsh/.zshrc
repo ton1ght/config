@@ -103,3 +103,17 @@ hex() {
 
 printf "0x%X\n" "$1"
 }
+
+# ~/.zshrc
+edit_modified_files() {
+  emulate -L zsh
+  local tmp; tmp=$(mktemp)
+  git status -s | grep " M" | cut -d " " -f3 | sed -e "s/^/git\ add\ /" > "$tmp" 
+  ${EDITOR:-nvim} "$tmp"
+  BUFFER=$(<"$tmp")          # put edited text into command line buffer
+  rm -f "$tmp"
+  zle -K vicmd                         # switch keymap to vi command mode
+  zle reset-prompt
+}
+zle -N edit_modified_files
+bindkey '^g' edit_modified_files   # Ctrl-g to trigger
