@@ -59,7 +59,7 @@ summary)
 
 manual)
     SELECTION=$(find "$MANUAL_DIR" -maxdepth 1 -type f -printf "%f\n" | wofi -i --dmenu --prompt="Select a manual:")
-    COMMAND=(sioyek --new-instance "${MANUAL_DIR}/${SELECTION}")
+    COMMAND=(zathura "${MANUAL_DIR}/${SELECTION}")
     ;;
 
 bookmark)
