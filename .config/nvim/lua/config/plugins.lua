@@ -76,7 +76,7 @@ require("blink.cmp").setup({
 require("oil").setup()
 vim.keymap.set("n", "<leader>o", "<cmd>Oil<CR>", { desc = "Open Oil" })
 
-require("nvim-treesitter.configs").setup({
+require("nvim-treesitter.config").setup({
     ensure_installed = {
         "c",
         "python",
