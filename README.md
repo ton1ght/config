@@ -26,6 +26,7 @@ config submodule update --init --recursive
 - eza
 - neovim
 - ranger
+- treesitter
 
 ## Credits
 
