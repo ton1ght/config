@@ -27,6 +27,7 @@ config submodule update --init --recursive
 - neovim
 - ranger
 - treesitter
+- xclip (for tmux-yank)
 
 ## Credits
 
