@@ -78,6 +78,12 @@ input "type:keyboard" {
     xkb_options "grp:switch,caps:swapescape"
 }
 
+input type:touchpad {
+    dwt enabled
+    tap enabled
+    natural_scroll enabled
+}
+
 ### Key bindings
 #
 # Basics:
@@ -228,20 +234,25 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
-    # bindsym Print exec grim
+    bindsym Print exec flameshot gui
 
 ### Custom Keybinds
 
+    bindsym $mod+x exec swaylock -K
+    bindsym $mod+n exec swaync-client -t
+    bindsym $mod+Shift+n exec swaync-client -C
+
     bindsym $altmod+c exec ~/scripts/open.sh config
     bindsym $altmod+m exec ~/scripts/open.sh manual
+    bindsym $altmod+b exec ~/scripts/open.sh bookmark
     bindsym $altmod+p exec ~/scripts/open.sh paper
     bindsym $altmod+g exec ~/scripts/open.sh search google
     bindsym $altmod+y exec ~/scripts/open.sh search youtube
     bindsym $altmod+d exec ~/scripts/open.sh search duckduckgo
     bindsym $altmod+t exec ~/scripts/open.sh search deepl
 
-    bindsym Print exec grim -g "$(slurp)" - | wl-copy && wl-paste > ~/pictures/screenshots/screenshot-$(date +%F_%T).png | notify-send "Screenshot taken" -t 1500
-    bindsym $mod+Print exec grim - | wl-copy && wl-paste > ~/pictures/screenshots/screenshot-$(date +%F_%T).png | notify-send "Screenshot taken" -t 1500
+    # bindsym Print exec grim -g "$(slurp)" - | wl-copy && wl-paste > ~/pictures/screenshots/screenshot-$(date +%F_%T).png | notify-send "Screenshot taken" -t 1500
+    # bindsym $mod+Print exec grim - | wl-copy && wl-paste > ~/pictures/screenshots/screenshot-$(date +%F_%T).png | notify-send "Screenshot taken" -t 1500
 
 
 ### Look
@@ -263,11 +274,12 @@ client.background        $base
 
 # bar
 bar {
+    swaybar_command waybar
     position top
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    # status_command while date +'%Y-%m-%d %X'; do sleep 1; done
 
     colors {
       background         $base
