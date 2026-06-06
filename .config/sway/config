@@ -95,7 +95,7 @@ input type:touchpad {
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+d exec $menu --show drun
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -274,7 +274,7 @@ client.background        $base
 
 # bar
 bar {
-    swaybar_command waybar
+    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
     position top
 
     # When the status_command prints a new line to stdout, swaybar updates.
